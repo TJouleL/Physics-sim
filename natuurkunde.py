@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 # === JOUW INPUT ===
@@ -100,11 +99,10 @@ verloren aan luchtweerstand : {(E_lucht + E_lucht_iter):.5f} Joule
 
 
 
-for i in [1.13, 1.08, 1.16]:
-    # === BEREKENING ===
-    E_botsing, E_lucht, E_verlies_totaal = simulate_fall_and_rise(1.5, i, mass, radius)
+# === BEREKENING ===
+E_botsing, E_lucht, E_verlies_totaal = simulate_fall_and_rise(h_0, h_1, mass, radius)
 
-    # === RESULTATEN ===
-    print(f"Totaal verloren energie (botsing + luchtweerstand): {E_verlies_totaal:.5f} J")
+# === RESULTATEN ===
+print(f"Totaal verloren energie (botsing + luchtweerstand): {E_verlies_totaal:.5f} J")
 
 
